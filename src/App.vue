@@ -1,19 +1,28 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+ 
   }
 }
+
+document.addEventListener('DOMContentLoaded',()=>{
+  const html =document.querySelector('html')
+  let fontSize =  window.innerWidth / 10 
+  fontSize = fontSize > 50 ? 50 :fontSize
+  html.style.fontSize = fontSize + 'px'
+
+})
+
+
 </script>
 
 <style lang="scss">
@@ -23,6 +32,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
